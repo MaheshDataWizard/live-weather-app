@@ -1,44 +1,56 @@
-.card{
+.card {
     width: 90%;
-    max-width: 670px;
+    max-width: 370px;
     max-height: 100vh;
     background-image: linear-gradient(145deg, skyblue, yellow, orange);
     border-radius: 20px;
     border: 2px solid blue;
     margin: 10px auto 0;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensures text is centered */
 }
 
-.search{
+
+.search {
     display: flex;
-    text-align: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     height: 40px;
     margin-top: 10px;
-    flex-basis: 80% 20%;
 }
 
-.search input{
-    font-size: 30px;
-    outline: 0;
-    border: 0;
+.search input {
+    flex: 1;
+    font-size: 18px;
+    padding: 10px;
     border-radius: 30px;
-    padding: 30px 40px 30px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    outline: none;
 }
 
-.search button{
-    outline: 0;
-    border: 0;
-    height: 60px;
-    width: 60px;
+.search button {
+    border: none;
     background-color: white;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.search button img{
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
+.search button img {
+    height: 20px;
+    width: 20px;
 }
 
 .weather {
@@ -46,49 +58,61 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
-.weather-icon{
-    width: 200px;
-    margin-top: 10px; 
+.weather-icon {
+    width: 100px;
+    margin-top: 10px;
 }
 
-.weather h1{
-    font-size: 30px;
+.weather h1 {
+    font-size: 40px;
     font-weight: 500;
+    margin: 10px 0;
 }
 
-.weather h2{
-    font-size: 25px;
+.weather h2 {
+    font-size: 30px;
     font-weight: 400;
+    margin: 10px 0;
 }
 
-.details{
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px; /* Added a max width to keep elements centered */
+}
+
+.col {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column; /* Stack icons and info vertically */
+    margin: 10px;
 }
 
-.col{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5px;
-    padding: 5px;
-}
-
-.col img{
+.col img {
     height: 50px;
     width: 50px;
-    margin-right: 15px;
+    margin-bottom: 10px;
 }
 
-.humidity, .wind{
-    font-size: 30px;
+.humidity, .wind {
+    font-size: 25px;
     font-weight: 500;
 }
 
-.info{
-    font-size: 20px;
+.info {
+    font-size: 18px;
     font-weight: 300;
+}
+
+.error {
+    text-align: center; /* Center the error message */
+    font-size: 18px;
+    margin-top: 10px;
+    color: red;
 }
